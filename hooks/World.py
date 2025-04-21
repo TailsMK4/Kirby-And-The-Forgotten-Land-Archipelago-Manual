@@ -370,8 +370,12 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
                 itemNamesToRemove.append(item.name)
 
     for itemName in itemNamesToRemove:
-        item = next(i for i in item_pool if i.name == itemName)
-        item_pool.remove(item)
+        try:
+            item = next(i for i in item_pool if i.name == itemName)
+            item_pool.remove(item)
+        except StopIteration:
+            # Item not found, nothing to do
+            pass
 
     return item_pool
 
@@ -441,8 +445,8 @@ def before_write_spoiler(world: World, multiworld: MultiWorld, spoiler_handle) -
 
 # This is called when you want to add information to the hint text
 def before_extend_hint_information(hint_data: dict[int, dict[int, str]], world: World, multiworld: MultiWorld, player: int) -> None:
-    
-    ### Example way to use this hook: 
+
+    ### Example way to use this hook:
     # if player not in hint_data:
     #     hint_data.update({player: {}})
     # for location in multiworld.get_locations(player):
@@ -452,7 +456,7 @@ def before_extend_hint_information(hint_data: dict[int, dict[int, str]], world: 
     #     use this section to calculate the hint string
     #
     #     hint_data[player][location.address] = hint_string
-    
+
     pass
 
 def after_extend_hint_information(hint_data: dict[int, dict[int, str]], world: World, multiworld: MultiWorld, player: int) -> None:
