@@ -1,5 +1,4 @@
 {
-    "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
     "Point of Arrival": { "starting": true, "connects_to": ["Waddle Dee Town"] },
     "Waddle Dee Town": { "connects_to": ["Natural Plains", "Figure Collection Volume 1"], "requires": "|Progressive Stage Clear|" },
     "Figure Collection Volume 1": { "connects_to": [], "requires": "|Progressive Stage Clear:2|" },

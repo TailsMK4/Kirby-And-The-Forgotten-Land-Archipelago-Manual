@@ -23,7 +23,7 @@
                 " ",
                 "More goals to come in a later version."
             ],
-            "default": "clear_lab_discovera",
+            "default": 1,
             "aliases": {"easiest": 0},
             "hidden": false
         },
@@ -38,7 +38,7 @@
         }
     },
     "user": {
-        "Randomize Big-Rig Mouth":{
+        "randomize_big_rig_mouth":{
             "description": [
                 "Should Big-Rig Mouth get randomized like most of the other Mouthful Mode Abilities? If true, one check is removed from Lab Discovera and the item",
                 "is instead randomized to a check prior to Lab Discovera. This item is required to beat Lab Discovera regardless of setting. This option is",
@@ -47,7 +47,7 @@
             "type": "Toggle",
             "default": false
         },
-        "Treasure Roads Include":{
+        "treasure_roads_include":{
             "description": [
                 "Choose whether the Manual should place items in the various Treasure Roads in the game. You may be required to complete some of these challenges",
                 "for progression. Beating the target times will NEVER be required. If false, the Manual will remove these locations before placing items. The",
@@ -57,7 +57,7 @@
             "type": "Toggle",
             "default": true
         },
-        "Waddle Dee Town Include":{
+        "waddle_dee_town_include":{
             "description": [
                 "Choose whether the Manual should place items in the various activities that can be done in Waddle Dee Town. These are:",
                 " ",
@@ -75,6 +75,6 @@
             ],
             "type": "Toggle",
             "default": true
-        },
+        }
     }
 }
